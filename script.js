@@ -41,6 +41,37 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        resultDiv.textContent = `あなたの正解数は ${score} / ${Object.keys(answers).length} です。`;
+        // 正答率を計算
+        const percentage = Math.round((score / Object.keys(answers).length) * 100);
+
+        // 結果メッセージを決定
+        let message = '';
+        if (percentage >= 90) {
+            message = '🎉 素晴らしい！ほぼ完璧です！';
+        } else if (percentage >= 70) {
+            message = '👍 よくできました！';
+        } else if (percentage >= 50) {
+            message = '📚 もう少し頑張りましょう！';
+        } else {
+            message = '💪 復習が必要ですね。頑張りましょう！';
+        }
+
+        resultDiv.innerHTML =
+            <div style="text-align: center; padding: 30px; margin: 20px 0; border: 2px solid #2196F3; border-radius: 10px; background: #f9f9f9; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <h2 style="color: #333; margin-bottom: 20px;">🎯 クイズ結果</h2>
+
+                <div style="font-size: 3em; font-weight: bold; color: #2196F3; margin: 20px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                    あなたの正解数は <span style="color: #4CAF50;">${score}</span> / ${Object.keys(answers).length} です
+                </div>
+
+                <div style="font-size: 1.5em; margin: 15px 0; color: #666;">
+                    正答率: <strong style="color: #FF9800;">${percentage}%</strong>
+                </div>
+
+                <div style="font-size: 1.2em; margin: 15px 0; color: #333;">
+                    ${message}
+                </div>
+            </div>
+            ;
     });
 });
