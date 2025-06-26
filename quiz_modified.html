@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Java &amp; JavaScript クイズ</title>
+    <link href="クイズサイト　お試し.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Java &amp; JavaScript クイズ</h1>
+    <form id="quizForm">
+
+        <p>選択肢の中から正しいものを選んで</p><br>
+        <h2>JavaScriptの問題</h2>
+        <ol>
+            <li>
+                <p>trimメソッドはどのような機能を持っているでしょう？</p>
+                <label>
+                    <input name="js1" type="radio" value="1" /> 文字列の一部を置き換える<br />
+                </label>
+                <label>
+                    <input name="js1" type="radio" value="2" /> 文字列の両端の空白を削除する<br />
+                </label>
+                <label>
+                    <input name="js1" type="radio" value="3" /> 文字列の長さを取得する<br />
+                </label>
+                <label>
+                    <input name="js1" type="radio" value="4" /> 文字列を大文字に変換する<br />
+                </label>
+            </li>
+            <li>
+                <p>class構文でconstructorメソッドが実行されるのはどの地点でしょう？</p>
+                <label>
+                    <input name="js2" type="radio" value="1" /> クラスが宣言されるとき<br />
+                </label>
+                <label>
+                    <input name="js2" type="radio" value="2" /> クラスがインスタンス化されるとき<br />
+                </label>
+                <label>
+                    <input name="js2" type="radio" value="3" /> クラスがエクスポートされるとき<br />
+                </label>
+                <label>
+                    <input name="js2" type="radio" value="4" /> 常に実行されている<br />
+                </label>
+            </li>
+            <li>
+                <p>map()メソッドは何をする？</p>
+                <label>
+                    <input name="js3" type="radio" value="1" /> 配列の各要素に対して関数を適用し、新しい配列を生成する
+                </label><br />
+                <label>
+                    <input name="js3" type="radio" value="2" /> 配列の最後の要素を削除する
+                </label><br />
+                <label>
+                    <input name="js3" type="radio" value="3" /> 配列を逆順に並べ替える
+                </label><br />
+                <label>
+                    <input name="js3" type="radio" value="4" /> 文字列を分割する
+                </label><br />
+            </li>
+            <li>
+                <p>querySelector()メソッドは何をする？</p>
+                <label>
+                    <input name="js4" type="radio" value="1" /> CSSセレクターで指定した要素を取得する
+                </label><br />
+                <label>
+                    <input name="js4" type="radio" value="2" /> HTML要素を作成する
+                </label><br />
+                <label>
+                    <input name="js4" type="radio" value="3" /> イベントを追加する
+                </label><br />
+                <label>
+                    <input name="js4" type="radio" value="4" /> 配列を操作する
+                </label><br />
+            </li>
+            <li>
+                <p>letとvarの違いは？</p>
+                <label>
+                    <input name="js5" type="radio" value="1" /> letはブロックスコープを持ち、varは関数スコープを持つ
+                </label><br />
+                <label>
+                    <input name="js5" type="radio" value="2" /> letは常にグローバル変数になる
+                </label><br />
+                <label>
+                    <input name="js5" type="radio" value="3" /> varは定数として扱われる
+                </label><br />
+                <label>
+                    <input name="js5" type="radio" value="4" /> varはブロックスコープを持つ
+                </label><br /><br />
+                <div class="quiz-explain" style="display: block;">
+                    <strong>ブロックスコープ：</strong> 変数が `{}` で囲まれたブロック内でのみ有効。 <br />
+                    例えば `if` や `for` の内部に定義された `let` 変数は、そのブロックを超えるとアクセスできない。 <br />
+                    <strong>グローバル変数：</strong> スクリプト全体でアクセス可能な変数で、どこからでも参照できる。 <br />
+                    `var` で宣言すると関数スコープを持ちますが、関数外で宣言された場合はグローバル変数になる。<br />
+                </div>
+            </li>
+            <li>
+                <p>JavaScriptで非同期処理を扱うための構文は？</p>
+                <label><input name="js6" type="radio" value="1" />async/await</label><br />
+                <label><input name="js4" type="radio" value="2" /> setTimeout/setInterval</label><br />
+                <label><input name="js6" type="radio" value="3" /> forEach</label><br />
+                <label><input name="js6" type="radio" value="4" /> sync/wait</label><br />
+            </li>
+            <li>
+                <p>JavaScriptのオブジェクトを浅いコピー（shallow copy）する方法は？</p>
+                <label><input name="js7" type="radio" value="1" /> Object.assign()</label><br />
+                <label><input name="js7" type="radio" value="2" /> JSON.stringify() &amp; JSON.parse()</label><br />
+                <label><input name="js7" type="radio" value="3" /> deepClone()</label><br />
+                <label><input name="js7" type="radio" value="4" /> cloneNode()</label><br /><br />
+                <div class="quiz-explain" style="display: block;">
+                    <strong>浅いコピー：</strong> オブジェクトの1段階のデータのみ値渡しのコピーになり、2段階以上のデータには参照渡しのコピーになる。<br />
+                    <strong>深いコピー：</strong> 多階層のデータでも、オブジェクトは最も深いところまですべての値をコピーする。<br />
+                </div>
+            </li>
+            <li>
+                <p>以下のうち、JavaScriptのイベントリスナーを追加する正しい方法は？</p>
+                <label><input name="js8" type="radio" value="1" /> element.addEventListener('click', function()
+                    {...})</label><br />
+                <label><input name="js8" type="radio" value="2" /> element.attachEvent('click', function()
+                    {...})</label><br />
+                <label><input name="js8" type="radio" value="3" /> element.onClick(function() {...})</label><br />
+                <label><input name="js8" type="radio" value="4" /> element.setEvent('click', function()
+                    {...})</label><br />
+            </li>
+            <li>
+                <p>JavaScriptの配列メソッドで、元の配列を変更せずに特定の条件を満たす要素を取得する方法は？</p>
+                <label><input name="js9" type="radio" value="1" /> filter()</label><br />
+                <label><input name="js9" type="radio" value="2" /> find()</label><br />
+                <label><input name="js9" type="radio" value="3" /> splice()</label><br />
+                <label><input name="js9" type="radio" value="4" /> shift()</label><br />
+            </li>
+            <li>
+                <p>JavaScriptのデフォルトパラメータの定義方法として正しいのは？</p>
+                <label><input name="js10" type="radio" value="1" /> function test(a = 10) {}</label><br />
+                <label><input name="js10" type="radio" value="2" /> function test(a: 10) {}</label><br />
+                <label><input name="js10" type="radio" value="3" /> function test(default a) {}</label><br />
+                <label><input name="js10" type="radio" value="4" /> function test(a) { a = 10 }</label><br />
+            </li>
+        </ol>
+        <h2>Javaの問題</h2>
+        <ol>
+            <li>
+                <p>Javaでオブジェクトを生成するキーワードは？</p>
+                <label><input name="java1" type="radio" value="1" /> create</label><br />
+                <label><input name="java1" type="radio" value="2" /> new</label><br />
+                <label><input name="java1" type="radio" value="3" /> make</label><br />
+                <label><input name="java1" type="radio" value="4" /> instance</label><br />
+            </li>
+            <li>
+                <p>Javaのクラスを継承するキーワードは？</p>
+                <label><input name="java2" type="radio" value="1" /> extend</label><br />
+                <label><input name="java2" type="radio" value="2" /> inherit</label><br />
+                <label><input name="java2" type="radio" value="3" /> implements</label><br />
+                <label><input name="java2" type="radio" value="4" /> derives</label><br />
+            </li>
+            <li>
+                <p>Javaのメソッドオーバーロードとは何でしょう？</p>
+                <label><input name="java3" type="radio" value="1" /> メソッドを削除すること</label><br />
+                <label><input name="java3" type="radio" value="2" /> 同じ名前のメソッドを異なるパラメータで定義すること</label><br />
+                <label><input name="java3" type="radio" value="3" /> メソッドを別のクラスにコピーすること</label><br />
+                <label><input name="java3" type="radio" value="4" /> メソッドを上書きすること</label><br />
+            </li>
+            <li>
+                <p>Javaで例外処理を行うためのキーワードは？</p>
+                <label><input name="java4" type="radio" value="1" /> catch</label><br />
+                <label><input name="java4" type="radio" value="2" /> throw</label><br />
+                <label><input name="java4" type="radio" value="3" /> try</label><br />
+                <label><input name="java4" type="radio" value="4" /> すべて正しい</label><br />
+            </li>
+            <li>
+                <p>Javaで静的メソッドを宣言するキーワードは？</p>
+                <label><input name="java5" type="radio" value="1" /> static</label><br />
+                <label><input name="java5" type="radio" value="2" /> private</label><br />
+                <label><input name="java5" type="radio" value="3" /> final</label><br />
+                <label><input name="java5" type="radio" value="4" /> protected</label><br />
+            </li>
+            <li>
+                <p>Javaで配列の要素数を取得する方法は？</p>
+                <label><input name="java6" type="radio" value="1" /> array.size()</label><br />
+                <label><input name="java6" type="radio" value="2" /> array.length</label><br />
+                <label><input name="java6" type="radio" value="3" /> array.count()</label><br />
+                <label><input name="java6" type="radio" value="4" /> array.capacity()</label><br />
+                <div class="quiz-explain1"><br />
+                    <strong>length・length()・size() の違い</strong><br />
+                    配列のメンバである `length` はフィールドなので、メソッドのように `()` は不要<br />
+                    <strong>length():</strong> 文字列の長さを取得するために使用されます。 <br />
+                    <strong>size():</strong> コレクション（ListやSetなど）の要素数を取得するために使用され<br />
+                    `size()` は `Collection` クラスで定義されたメソッドなので、リストやセットなどのコレクションで使用<br />
+                </div>
+            </li>
+            <li>
+                <p>Javaのコレクションフレームワークでリストの要素を追加するメソッドは？</p>
+                <label><input name="java7" type="radio" value="1" /> add()</label><br />
+                <label><input name="java7" type="radio" value="2" /> push()</label><br />
+                <label><input name="java7" type="radio" value="3" /> insert()</label><br />
+                <label><input name="java7" type="radio" value="4" /> append()</label><br />
+            </li>
+            <li>
+                <p>Javaのスレッドを開始するために使用するメソッドは？</p>
+                <label><input name="java8" type="radio" value="1" /> start()</label><br />
+                <label><input name="java8" type="radio" value="2" /> run()</label><br />
+                <label><input name="java8" type="radio" value="3" /> execute()</label><br />
+                <label><input name="java8" type="radio" value="4" /> begin()</label><br />
+            </li>
+            <li>
+                <p>Javaでオブジェクトが不要になった際に自動的に削除される仕組みは？</p>
+                <label><input name="java9" type="radio" value="1" /> ガベージコレクション</label><br />
+                <label><input name="java9" type="radio" value="2" /> メモリクリーンアップ</label><br />
+                <label><input name="java9" type="radio" value="3" /> デストラクター</label><br />
+                <label><input name="java9" type="radio" value="4" /> メモリオーバーフロー</label><br />
+            </li>
+            <li>
+                <p>Javaで複数の例外を処理するための構文は？</p>
+                <label><input name="java10" type="radio" value="1" /> try-catch-finally</label><br />
+                <label><input name="java10" type="radio" value="2" /> exception-handling</label><br />
+                <label><input name="java10" type="radio" value="3" /> error-catch</label><br />
+                <label><input name="java10" type="radio" value="4" /> try-error</label><br />
+            </li>
+        </ol>
+        <input type="submit" value="提出" />
+    </form>
+    <div class="result" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
