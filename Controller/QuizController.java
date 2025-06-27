@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/quiz")
+
 public class QuizController {
     
     @Autowired
@@ -21,9 +21,13 @@ public class QuizController {
     // クイズページ表示
     @GetMapping
     public String showQuiz() {
-        return "quiz"; // 既存のindex.htmlをquiz.htmlにリネーム
+        return "index"; // 既存のindex.htmlをquiz.htmlにリネーム
     }
-    
+     // クイズページも同じindex.htmlを表示
+    @GetMapping("/quiz")  // ← 修正（フルパスで指定）
+    public String showQuiz() {
+        return "index";  // ← quiz → index に変更
+    }
     // 結果保存（Ajax用）
     @PostMapping("/save-result")
     @ResponseBody
