@@ -92,6 +92,30 @@ function addUsernameForm() {
         form.style.display = "none";
 }
 
+ // ランキング表示エリアを作成
+    function createRankingArea() {
+        const form = document.querySelector("form");
+        if (!form) return;
+        
+        const rankingDiv = document.createElement("div");
+        rankingDiv.className = "ranking-container";
+        rankingDiv.id = "ranking-container";
+        rankingDiv.style.display = "none";
+        rankingDiv.innerHTML = `
+            <div class="ranking-header">
+                <h2>🏆 クイズランキング</h2>
+                <button onclick="backToUsername()" class="btn btn-back">← 戻る</button>
+            </div>
+            <div id="ranking-content">
+                <div class="loading">📊 ランキングを読み込み中...</div>
+            </div>
+            <div class="ranking-navigation">
+                <button onclick="backToUsername()" class="btn btn-primary">新しくクイズに挑戦</button>
+            </div>
+        `;
+        
+        form.parentNode.insertBefore(rankingDiv, form);
+    }
 function startQuiz() {
     const username = document.getElementById("username").value.trim();
     if(!username) {

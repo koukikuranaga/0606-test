@@ -77,3 +77,10 @@ public class QuizController {
         return ResponseEntity.ok(results);
     }
 }
+    // QuizController.java に追加
+    @GetMapping("/quiz/api/ranking")
+    @ResponseBody
+    public ResponseEntity<List<QuizResult>> getRankingData() {
+        List<QuizResult> rankings = quizResultService.getTopScores();
+        return ResponseEntity.ok(rankings);
+}
