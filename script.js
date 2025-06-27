@@ -73,6 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
+         // 全ラジオボタンを無効化
+    form.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.disabled = true;
+    });
 
         const retryButton = document.createElement("button");
         retryButton.textContent = "もう一度挑戦";
@@ -82,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
             resultDiv.innerHTML = "";
             document.querySelectorAll("label").forEach(label => {
                 label.classList.remove("correct", "incorrect");
+            });
+              // ラジオボタンを再び有効化
+            form.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.disabled = false;
             });
         };
         resultDiv.appendChild(retryButton);
