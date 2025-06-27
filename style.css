@@ -70,39 +70,6 @@ button:hover {
     cursor: pointer;
 }
 
-/* ランキングテーブル */
-.ranking-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.ranking-table th,
-.ranking-table td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.ranking-table th {
-    background-color: #2196F3;
-    color: white;
-}
-
-.top-rank-1 {
-    background-color: #ffd700;
-    font-weight: bold;
-}
-
-.top-rank-2 {
-    background-color: #c0c0c0;
-    font-weight: bold;
-}
-
-.top-rank-3 {
-    background-color: #cd7f32;
-    font-weight: bold;
-}
 
 .button-container {
     text-align: center;
