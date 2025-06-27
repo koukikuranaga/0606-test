@@ -43,6 +43,89 @@ button:hover {
     font-weight: bold;
     margin-top: 20px;
 }
+/* quiz-extension.css */
+/* ユーザー名入力フォーム */
+.username-form {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.username-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.username-form button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ランキングテーブル */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.ranking-table th,
+.ranking-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.ranking-table th {
+    background-color: #2196F3;
+    color: white;
+}
+
+.top-rank-1 {
+    background-color: #ffd700;
+    font-weight: bold;
+}
+
+.top-rank-2 {
+    background-color: #c0c0c0;
+    font-weight: bold;
+}
+
+.top-rank-3 {
+    background-color: #cd7f32;
+    font-weight: bold;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.btn-primary {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
 
 @media (max-width: 768px) {
     .quiz-container {

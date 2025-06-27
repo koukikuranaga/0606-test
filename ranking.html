@@ -1,0 +1,46 @@
+<!-- ranking.html -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズランキング</title>
+    <link rel="stylesheet" href="/css/quiz-styles.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>🏆 クイズランキング</h1>
+
+        <div class="ranking-container">
+            <table class="ranking-table">
+                <thead>
+                    <tr>
+                        <th>順位</th>
+                        <th>ユーザー名</th>
+                        <th>スコア</th>
+                        <th>正答率</th>
+                        <th>プレイ日時</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="result, iterStat : ${rankings}"
+                        th:classappend="${iterStat.index < 3} ? 'top-rank-' + ${iterStat.index + 1} : ''">
+                        <td th:text="${iterStat.index + 1}">1</td>
+                        <td th:text="${result.username}">ユーザー名</td>
+                        <td th:text="${result.score} + '/' + ${result.totalQuestions}">20/20</td>
+                        <td th:text="${result.percentage} + '%'">100%</td>
+                        <td th:text="${#temporals.format(result.playDate, 'yyyy/MM/dd HH:mm')}">2024/01/01 12:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-container">
+            <a href="/quiz" class="btn btn-primary">クイズに挑戦</a>
+        </div>
+    </div>
+</body>
+
+</html>
