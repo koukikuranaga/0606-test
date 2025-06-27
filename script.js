@@ -73,6 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
+        // 全ラジオボタンを無効化
+    form.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.disabled = true;
+    });
+
 
         const retryButton = document.createElement("button");
         retryButton.textContent = "もう一度挑戦";
