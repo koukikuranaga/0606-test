@@ -94,6 +94,14 @@ button:hover {
     color: white;
 }
 
+.correct {
+  background-color: #c8e6c9 !important; /* 緑 */
+}
+.incorrect {
+  background-color: #ffcdd2 !important; /* 赤 */
+}
+
+
 @media (max-width: 768px) {
     .quiz-container {
         padding: 10px;

@@ -73,5 +73,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
+
+        for (let key in answers) {
+        const options = form.querySelectorAll(`input[name="${key}"]`);
+        options.forEach(option => {
+        const label = option.closest("label");
+        if (option.value === answers[key]) {
+         label.classList.add("correct");
+        } else if (option.checked) {
+      label.classList.add("incorrect");
+    }
+  });
+
+  const selected = form.querySelector(`input[name="${key}"]:checked`);
+  if (selected && selected.value === answers[key]) {
+    score++;
+  }
+}
+const retryButton = document.createElement("button");
+retryButton.textContent = "もう一度挑戦";
+retryButton.className = "btn btn-primary";
+retryButton.onclick = () => {
+  form.reset();
+  resultDiv.innerHTML = "";
+  document.querySelectorAll("label").forEach(label => {
+    label.classList.remove("correct", "incorrect");
+  });
+};
+resultDiv.appendChild(retryButton);
+
     });
 });
