@@ -88,6 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll("label").forEach(label => {
                 label.classList.remove("correct", "incorrect");
             });
+             // ラジオボタンを再び有効化
+            form.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.disabled = false;
+            });
         };
         resultDiv.appendChild(retryButton);
     });
